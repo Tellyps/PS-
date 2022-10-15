@@ -44,10 +44,7 @@ async def start(client: pr0fess0r_99, message: Message):
     approvedbot = await client.get_me() 
     button = [[ InlineKeyboardButton("🤖 ʙᴏᴛ ʟɪꜱᴛ", url="https://t.me/Rapid_Bots"), InlineKeyboardButton("📢 ᴜᴘᴅᴀᴛᴇꜱ", url="https://t.me/Rapid_Bots") ],
               [ InlineKeyboardButton("🤔 ʜᴏᴡ ᴛᴏ ᴜꜱᴇ ᴍᴇ 🤭", url=f"https://t.me/Rapid_Bots") ]]
-    await client.send_message(chat_id=message.chat.id, text=f"**__Hello {message.from_user.mention}, I Am Auto Approve Bot. How To Use Me ✯ Rapid_Auto_Approve_bot Add Me As administrator, with  Permission In You Group/Channel, Where I Need To Approve Subscribers. 
-✯ Then Forward Me A Message From That Channel/Group.
-✯ Then, Bot Start The Work
-✯ Dought - Sk_Network_Owner**__", reply_markup=InlineKeyboardMarkup(button), disable_web_page_preview=True)
+    await client.send_message(chat_id=message.chat.id, text=f"Hello {message.from_user.mention}, I Am Auto Approve Bot. How To Use Me ✯ @Rapid_Auto_Approve_bot Add Me As administrator, with  Permission In You Group/Channel, Where I Need To Approve Subscribers. ✯ Then Forward Me A Message From That Channel/Group.✯ Then, Bot Start The Work✯ Dought - @Sk_Network_Owner", reply_markup=InlineKeyboardMarkup(button), disable_web_page_preview=True)
 
 @pr0fess0r_99.on_chat_join_request((filters.group | filters.channel) & filters.chat(CHAT_ID) if CHAT_ID else (filters.group | filters.channel))
 async def autoapprove(client: pr0fess0r_99, message: ChatJoinRequest):
